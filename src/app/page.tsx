@@ -1,9 +1,12 @@
+import Categories from '@/core/components/Categories';
 import Hero from '@/core/components/Hero';
+import { Box } from '@mui/material';
 
 export default function Home() {
   return (
-    <div>
+    <Box>
       <Hero />
-    </div>
+      <Categories />
+    </Box>
   );
 }

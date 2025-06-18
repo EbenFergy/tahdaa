@@ -2,6 +2,8 @@ import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/core/components/Header';
 import { Urbanist } from 'next/font/google';
+import MuiClientWrapper from './MuiClientWrapper';
+import Footer from '@/core/components/Footer';
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -21,16 +23,12 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body className={`${urbanist.variable} font-urbanist antialiased`}>
-        <Header />
-        {children}
-        <Footer />
+        <MuiClientWrapper>
+          <Header />
+          {children}
+          <Footer />
+        </MuiClientWrapper>
       </body>
     </html>
-  );
-}
-
-function Footer() {
-  return (
-    <footer className="bg-gray-100 text-center p-4 text-sm text-gray-600">© {new Date().getFullYear()} Tahdaa. All rights reserved.</footer>
   );
 }
