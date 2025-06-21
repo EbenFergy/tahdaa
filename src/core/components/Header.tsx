@@ -5,14 +5,8 @@ import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import Image from 'next/image';
-import { usePathname } from 'next/navigation';
 
 export default function Header() {
-  const pathname = usePathname();
-  const isHomePage: boolean = pathname === '/';
-
-  // if (isHomePage) return null;
-
   return (
     <div className="px-6 md:px-12 bg-[#F5F6FA] ">
       <header className="flex items-center justify-between  py-4  ">
