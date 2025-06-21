@@ -1,41 +1,47 @@
 // components/Header.tsx
-// import Image from 'next/image';
+'use client';
+
 import Link from 'next/link';
+import { Button } from '@/components/ui/button';
+import { cn } from '@/lib/utils';
+import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
-const Header = () => {
+export default function Header() {
+  const pathname = usePathname();
+  const isHomePage: boolean = pathname === '/';
+
+  // if (isHomePage) return null;
+
   return (
-    <header className="flex items-center justify-between px-6 py-4 bg-white shadow-sm">
-      {/* Logo */}
-      <Link href="/">
-        <div className="flex items-center gap-2">
-          {/* <Image src="/logo.png" alt="Tahdaa Logo" width={40} height={40} /> */}
-          <span className="text-xl font-bold text-blue-700">Tahdaa</span>
-        </div>
-      </Link>
-
-      {/* Navigation */}
-      <nav className="flex items-center gap-6">
-        <Link href="/services" className="text-sm font-medium text-gray-700 hover:text-blue-700">
-          Services
+    <div className="px-6 md:px-12 bg-[#F5F6FA] ">
+      <header className="flex items-center justify-between  py-4  ">
+        {/* Logo */}
+        <Link href="/" className="flex items-center gap-2">
+          <Image src="/logo.svg" alt="Tahdaa Logo" width={110} height={110} />
         </Link>
 
-        <Link href="/signin">
-          <button className="text-sm font-medium px-4 py-2 rounded-md bg-[#EBECEF] text-gray-800 hover:bg-gray-300">Sign In</button>
-        </Link>
+        {/* Navigation */}
+        <nav className="flex items-center gap-6">
+          <Link href="/services" className="text-md font-medium text-gray-700 hover:text-primary">
+            Services
+          </Link>
 
-        <Link href="/become-a-pro">
-          <button
-            className="text-sm font-medium px-4 py-2 rounded-md text-white"
-            style={{
-              background: 'linear-gradient(270deg, #003CC5 0%, #29BFF4 100%)',
-            }}
-          >
-            Become a Pro
-          </button>
-        </Link>
-      </nav>
-    </header>
+          <Link href="/signin">
+            <Button size="lg" className="text-md bg-neutral-200 text-gray-800 hover:bg-neutral-300">
+              Sign In
+            </Button>
+          </Link>
+
+          <Link href="/become-a-pro">
+            <Button size="lg" className={cn('text-white', 'bg-gradient-to-r from-[#29BFF4] to-[#003CC5]', 'hover:opacity-90', 'text-md')}>
+              <Image src="/avatar-pro.svg" alt="Pro Icon" width={24} height={24} className="rounded-full z-50" />
+              Become a Pro
+            </Button>
+          </Link>
+        </nav>
+      </header>
+      <hr className="border-b border-gray-200" />
+    </div>
   );
-};
-
-export default Header;
+}

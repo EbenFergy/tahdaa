@@ -1,4 +1,5 @@
 const tailwindConfig = {
+  darkMode: 'class', // Enables dark mode support
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',

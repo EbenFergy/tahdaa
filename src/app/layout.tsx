@@ -1,9 +1,9 @@
 import type { Metadata } from 'next';
 import './globals.css';
 import Header from '@/core/components/Header';
-import { Urbanist } from 'next/font/google';
-import MuiClientWrapper from './MuiClientWrapper';
 import Footer from '@/core/components/Footer';
+import { Urbanist } from 'next/font/google';
+import { ThemeProvider } from '@/components/theme-provider';
 
 const urbanist = Urbanist({
   subsets: ['latin'],
@@ -21,13 +21,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en">
-      <body className={`${urbanist.variable} font-urbanist antialiased`}>
-        <MuiClientWrapper>
+    <html lang="en" suppressHydrationWarning>
+      <body className={`${urbanist.variable} font-urbanist antialiased bg-white overflow-x-hidden`}>
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <Header />
-          {children}
+          <main>{children}</main>
           <Footer />
-        </MuiClientWrapper>
+        </ThemeProvider>
       </body>
     </html>
   );
