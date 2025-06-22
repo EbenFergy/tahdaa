@@ -4,7 +4,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
-import { Menu, X } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Dialog, DialogContent, DialogTrigger, DialogClose, DialogTitle } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
 
@@ -54,7 +54,6 @@ export default function Header() {
                 'animate-in slide-in-from-right duration-300',
                 'data-[state=closed]:slide-out-to-right data-[state=closed]:fade-out'
               )}
-              // side="right"
             >
               <VisuallyHidden>
                 <DialogTitle>Mobile navigation menu</DialogTitle>
