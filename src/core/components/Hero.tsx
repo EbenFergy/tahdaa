@@ -3,6 +3,7 @@
 import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
+import HeroSearch from './HeroSearch';
 
 const professions = ['Builders', 'Plumbers', 'Electricians', 'Mechanics', 'Painters'];
 
@@ -17,10 +18,10 @@ const Hero = () => {
   }, []);
 
   return (
-    <header className="border-b  top-0 z-50 bg-[#F5F6FA] overflow-x-hidden">
-      <section className="w-full px-6 md:px-12 lg:px-24  py-18 max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center gap-12">
+    <header className="z-50 bg-[#F5F6FA] overflow-x-hidden">
+      <section className="w-full px-6 md:px-12 lg:px-12 py-8 md:py-18  max-w-screen-2xl mx-auto flex flex-col md:flex-row items-center gap-12">
         {/* Left Side */}
-        <div className=" flex-1 z-100">
+        <div className="flex-1 z-10 ">
           <h1 className="font-urbanist font-semibold text-[48px] md:text-[48px] lg:text-[64px] leading-[60px] md:leading-[60px] lg:leading-[85px] tracking-[-0.02em]  decoration-solid decoration-0 text-[#111827]">
             Connect with Nearby Top-rated Professional <br />
             <span className="underline text-[#005ED3] underline-offset-3" style={{ textDecorationThickness: '2px' }}>
@@ -32,14 +33,8 @@ const Hero = () => {
             We can connect you to the right Service, first time and every time.
           </p>
 
-          {/* Search Bar */}
-          <div className="mt-8 w-full max-w-2xl">
-            <div className="flex border border-gray-300 rounded-lg overflow-hidden shadow-sm">
-              <input type="text" placeholder="Search for services" className="w-1/2 px-4 py-3 outline-none text-sm" />
-              <div className="border-l border-gray-300"></div>
-              <input type="text" placeholder="Enter your location" className="w-1/2 px-4 py-3 outline-none text-sm" />
-            </div>
-          </div>
+          {/* search section */}
+          <HeroSearch />
 
           <div className="flex items-center space-x-6 text-sm text-gray-600">
             <div className="flex items-center space-x-2">
@@ -54,14 +49,11 @@ const Hero = () => {
         </div>
 
         {/* Right Side Image */}
-        <div className="flex-1 w-full min-w-[500px] max-w-[1000px] -ml-5 -mt-5 relative z-10 scale-110">
-          <Image
+        <div className="flex-1 w-full min-w-[500px] max-w-[1000px] -ml-5 -mt-5 relative z-10 scale-110 ">
+          <img
             src="/item-satisfaction.svg"
             alt="satisfaction image"
-            width={150}
-            height={150}
-            className="h-auto object-contain absolute bottom-15 left-30 md:-left-8 md:top-10"
-            priority
+            className="w-[140px] h-auto object-contain absolute bottom-20 left-30 md:-left-8 md:top-10 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />
           <Image
             src="https://res.cloudinary.com/dpr056mnn/image/upload/hero-image_mzfdsp.png"
@@ -71,13 +63,10 @@ const Hero = () => {
             className="w-full h-auto object-contain"
             priority
           />
-          <Image
+          <img
             src="/item-professionals.svg"
             alt="professionals image"
-            width={150}
-            height={150}
-            className="h-auto object-contain absolute bottom-0 left-30 md:left-auto md:-right-8 md:bottom-5 "
-            priority
+            className="w-[140px] h-auto object-contain absolute bottom-5 left-30 md:left-auto md:-right-8 md:bottom-5 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />
         </div>
       </section>

@@ -5,7 +5,7 @@ import Image from 'next/image';
 export default function Home() {
   return (
     <main>
-      <div className="w-full overflow-x-hidden absolute top-0">
+      <div className="w-full overflow-hidden absolute top-0">
         <Image
           src="/blurred-ellipse.svg"
           alt="Hero image"

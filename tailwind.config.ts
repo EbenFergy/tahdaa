@@ -17,6 +17,9 @@ const tailwindConfig = {
         'blue-700': '#003CC5',
         'blue-500': '#29BFF4',
       },
+      screens: {
+        mdlg: '900px',
+      },
     },
   },
   plugins: [],

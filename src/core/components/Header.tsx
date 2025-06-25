@@ -42,34 +42,28 @@ export default function Header() {
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="link" size="icon">
-                {/* <Menu className="h-6 w-6" /> */}
-                <Image src="/harmburger-menu.svg" alt="Tahdaa Logo" width={30} height={30} />
+                <Image src="/harmburger-menu.svg" alt="Tahdaa Menu" width={30} height={30} />
               </Button>
             </DialogTrigger>
 
-            <DialogContent
-              className={cn(
-                'fixed right-0 top-0 h-full w-3/4 max-w-sm bg-white z-[1000] p-6 flex flex-col gap-6',
-                'border-l border-gray-200 shadow-xl',
-                'animate-in slide-in-from-right duration-300',
-                'data-[state=closed]:slide-out-to-right data-[state=closed]:fade-out'
-              )}
-            >
+            <DialogContent className={cn('h-screen', 'w-full', 'absolute', 'top-0', 'left-0', 'right-0')}>
               <VisuallyHidden>
                 <DialogTitle>Mobile navigation menu</DialogTitle>
               </VisuallyHidden>
 
+              {/* Header with logo and close */}
               <div className="flex justify-between items-center">
                 <Image src="/logo.svg" alt="Tahdaa Logo" width={100} height={100} />
-                <DialogClose asChild>
+                {/* <DialogClose asChild>
                   <Button variant="ghost" size="icon">
                     <X className="h-5 w-5" />
                   </Button>
-                </DialogClose>
+                </DialogClose> */}
               </div>
 
+              {/* Navigation */}
               <nav className="flex flex-col gap-4 mt-6">
-                <Link href="/services" className="text-md font-medium text-gray-700 hover:text-primary">
+                <Link href="/services" className="text-lg font-medium text-gray-700 hover:text-primary">
                   Services
                 </Link>
 
