@@ -1,8 +1,8 @@
+/* eslint-disable @next/next/no-img-element */
 'use client';
 
 import useMediaQuery from '@/core/hooks/useMediaQuery';
 import { featuredCategoryIcons } from '../__data__/categories.data';
-import Image from 'next/image';
 
 export default function Categories() {
   // Tailwind breakpoints:
@@ -34,9 +34,9 @@ export default function Categories() {
           {entries.map(([key, icon], index) => (
             <div
               key={index}
-              className="flex flex-col items-center justify-center bg-white rounded py-10 text-center cursor-pointer shadow-sm hover:shadow-lg transition-shadow"
+              className="flex flex-col items-center justify-center hover:bg-card-gradient border border-transparent hover:border-primary-var rounded py-10 text-center cursor-pointer shadow-sm hover:shadow-lg transition-shadow"
             >
-              <Image src={icon} alt="Hero image" width={65} height={65} className=" h-auto object-contain" />
+              <img src={icon} alt="Hero image" width={65} height={65} className=" h-auto object-contain " />
 
               <h3 className="font-semibold text-gray-900">{key}</h3>
             </div>

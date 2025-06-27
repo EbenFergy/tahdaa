@@ -14,8 +14,10 @@ const tailwindConfig = {
         urbanist: ['var(--font-urbanist)', 'sans-serif'],
       },
       colors: {
-        'blue-700': '#003CC5',
-        'blue-500': '#29BFF4',
+        primary: 'var(--primary-main)',
+        'primary-200': 'var(--primary-main-200)',
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
       },
       screens: {
         mdlg: '900px',
