@@ -1,0 +1,28 @@
+import { Category } from '../types/categories.types';
+
+export const featuredCategoryIcons: Partial<Record<Category, string>> = {
+  [Category.CONSTRUCTION]: '/categories/construction.svg',
+  [Category.REMOVAL]: '/categories/removals.svg',
+  [Category.CLEANING]: '/categories/cleaning.svg',
+  [Category.COMPUTER]: '/categories/computer.svg',
+  [Category.ELECTRICAL]: '/categories/electrical.svg',
+  [Category.PLUMBING]: '/categories/plumbing.svg',
+  [Category.REPAIR]: '/categories/repair.svg',
+  [Category.PAINTING]: '/categories/painting.svg',
+  [Category.CARPENTRY]: '/categories/carpentry.svg',
+  [Category.INTERIOR_DESIGN]: '/categories/interior_design.svg',
+  [Category.MEDICAL]: '/categories/medical.svg',
+  [Category.LEGAL]: '/categories/legal.svg',
+  [Category.GARDENING]: '/categories/gardening.svg',
+  [Category.ROOFING]: '/categories/roofing.svg',
+  [Category.HVAC]: '/categories/hvac.svg',
+  [Category.FLOORING]: '/categories/flooring.svg',
+  [Category.HANDYMAN]: '/categories/handyman.svg',
+  [Category.MOVING]: '/categories/moving.svg',
+  [Category.SECURITY]: '/categories/security.svg',
+  [Category.FITNESS]: '/categories/fitness.svg',
+  [Category.BEAUTY]: '/categories/beauty.svg',
+  [Category.AUTOMOTIVE]: '/categories/automotive.svg',
+  [Category.PETS]: '/categories/pets.svg',
+  [Category.EVENT_PLANNING]: '/categories/event-planning.svg',
+};

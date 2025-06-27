@@ -1,4 +1,4 @@
-import Categories from '@/core/components/Categories';
+import Categories from '@/categories/components/Categories';
 import Hero from '@/core/components/Hero';
 import Image from 'next/image';
 
