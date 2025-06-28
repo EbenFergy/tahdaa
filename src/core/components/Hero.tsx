@@ -52,7 +52,7 @@ const Hero = () => {
         {/* Right Side Image */}
         <div className="flex-1 w-full min-w-[500px] max-w-[1000px] -ml-5 -mt-5 relative z-10 scale-110 ">
           <Icon
-            path="/item-satisfaction.svg"
+            src="/item-satisfaction.svg"
             alt="satisfaction image"
             className="w-[140px] absolute bottom-20 left-30 md:-left-8 md:top-10 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />
@@ -65,7 +65,7 @@ const Hero = () => {
             priority
           />
           <Icon
-            path="/item-professionals.svg"
+            src="/item-professionals.svg"
             alt="professionals image"
             className="w-[140px] absolute bottom-5 left-30 md:left-auto md:-right-8 md:bottom-5 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />

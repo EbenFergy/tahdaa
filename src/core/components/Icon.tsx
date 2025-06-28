@@ -3,13 +3,13 @@
 import React from 'react';
 
 type IconProps = {
-  path: string;
+  src: string;
   alt: string;
   className?: string;
 };
 
-const Icon = ({ path, alt, className = '' }: IconProps) => {
-  return <img src={path} alt={alt} className={`object-contain ${className}`} />;
+const Icon = ({ src, alt, className = '' }: IconProps) => {
+  return <img src={src} alt={alt} className={`object-contain ${className}`} />;
 };
 
 export default Icon;

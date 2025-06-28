@@ -13,7 +13,7 @@ export default function Header() {
       <header className="flex items-center justify-between py-4 relative z-50">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Icon path="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
+          <Icon src="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ export default function Header() {
 
           <Link href="/become-a-pro">
             <Button size="lg" className={cn('text-white', 'bg-gradient-to-r from-[#29BFF4] to-[#003CC5]', 'hover:opacity-90', 'text-md')}>
-              <Icon path="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
+              <Icon src="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
               Become a Pro
             </Button>
           </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="link" size="icon">
-                <Icon path="/harmburger-menu.svg" alt="Tahdaa Menu" className="rounded-full w-[30]" />
+                <Icon src="/harmburger-menu.svg" alt="Tahdaa Menu" className="rounded-full w-[30]" />
               </Button>
             </DialogTrigger>
 
@@ -52,7 +52,7 @@ export default function Header() {
 
               {/* Header with logo and close */}
               <div className="flex justify-between items-center">
-                <Icon path="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
+                <Icon src="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
                 {/* <DialogClose asChild>
                   <Button variant="ghost" size="icon">
                     <X className="h-5 w-5" />
@@ -72,7 +72,7 @@ export default function Header() {
 
                 <Link href="/become-a-pro">
                   <Button className="w-full bg-gradient-to-r from-[#29BFF4] to-[#003CC5] text-white hover:opacity-90">
-                    <Icon path="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
+                    <Icon src="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
                     Become a Pro
                   </Button>
                 </Link>
