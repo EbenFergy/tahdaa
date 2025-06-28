@@ -1,11 +1,11 @@
 'use client';
 
 import Link from 'next/link';
-import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import { Dialog, DialogContent, DialogTrigger, DialogTitle } from '@/components/ui/dialog';
 import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+import Icon from './Icon';
 
 export default function Header() {
   return (
@@ -13,7 +13,7 @@ export default function Header() {
       <header className="flex items-center justify-between py-4 relative z-50">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2">
-          <Image src="/logo.svg" alt="Tahdaa Logo" width={110} height={110} />
+          <Icon path="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
         </Link>
 
         {/* Desktop Navigation */}
@@ -30,7 +30,7 @@ export default function Header() {
 
           <Link href="/become-a-pro">
             <Button size="lg" className={cn('text-white', 'bg-gradient-to-r from-[#29BFF4] to-[#003CC5]', 'hover:opacity-90', 'text-md')}>
-              <Image src="/avatar-pro.svg" alt="Pro Icon" width={24} height={24} className="rounded-full" />
+              <Icon path="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
               Become a Pro
             </Button>
           </Link>
@@ -41,7 +41,7 @@ export default function Header() {
           <Dialog>
             <DialogTrigger asChild>
               <Button variant="link" size="icon">
-                <Image src="/harmburger-menu.svg" alt="Tahdaa Menu" width={30} height={30} />
+                <Icon path="/harmburger-menu.svg" alt="Tahdaa Menu" className="rounded-full w-[30]" />
               </Button>
             </DialogTrigger>
 
@@ -52,7 +52,7 @@ export default function Header() {
 
               {/* Header with logo and close */}
               <div className="flex justify-between items-center">
-                <Image src="/logo.svg" alt="Tahdaa Logo" width={100} height={100} />
+                <Icon path="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
                 {/* <DialogClose asChild>
                   <Button variant="ghost" size="icon">
                     <X className="h-5 w-5" />
@@ -72,7 +72,7 @@ export default function Header() {
 
                 <Link href="/become-a-pro">
                   <Button className="w-full bg-gradient-to-r from-[#29BFF4] to-[#003CC5] text-white hover:opacity-90">
-                    <Image src="/avatar-pro.svg" alt="Pro Icon" width={24} height={24} className="rounded-full mr-2" />
+                    <Icon path="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
                     Become a Pro
                   </Button>
                 </Link>

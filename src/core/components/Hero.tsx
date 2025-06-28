@@ -4,6 +4,7 @@ import { CheckCircle } from 'lucide-react';
 import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import HeroSearch from './HeroSearch';
+import Icon from './Icon';
 
 const professions = ['Builders', 'Plumbers', 'Electricians', 'Mechanics', 'Painters'];
 
@@ -50,10 +51,10 @@ const Hero = () => {
 
         {/* Right Side Image */}
         <div className="flex-1 w-full min-w-[500px] max-w-[1000px] -ml-5 -mt-5 relative z-10 scale-110 ">
-          <img
-            src="/item-satisfaction.svg"
+          <Icon
+            path="/item-satisfaction.svg"
             alt="satisfaction image"
-            className="w-[140px] h-auto object-contain absolute bottom-20 left-30 md:-left-8 md:top-10 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
+            className="w-[140px] absolute bottom-20 left-30 md:-left-8 md:top-10 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />
           <Image
             src="https://res.cloudinary.com/dpr056mnn/image/upload/hero-image_mzfdsp.png"
@@ -63,10 +64,10 @@ const Hero = () => {
             className="w-full h-auto object-contain"
             priority
           />
-          <img
-            src="/item-professionals.svg"
+          <Icon
+            path="/item-professionals.svg"
             alt="professionals image"
-            className="w-[140px] h-auto object-contain absolute bottom-5 left-30 md:left-auto md:-right-8 md:bottom-5 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
+            className="w-[140px] absolute bottom-5 left-30 md:left-auto md:-right-8 md:bottom-5 drop-shadow-[0px_16px_22px_rgba(0,0,0,0.15)]"
           />
         </div>
       </section>
