@@ -1,5 +1,5 @@
 const tailwindConfig = {
-  darkMode: 'class', // Enables dark mode support
+  darkMode: 'class',
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     './app/**/*.{js,ts,jsx,tsx}',
@@ -8,19 +8,27 @@ const tailwindConfig = {
     './core/**/*.{js,ts,jsx,tsx}',
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
+  safelist: [
+    'slide-in-from-right',
+    'slide-out-to-right',
+    'data-[state=open]:slide-in-from-right',
+    'data-[state=closed]:slide-out-to-right',
+  ],
   theme: {
     extend: {
-      fontFamily: {
-        urbanist: ['var(--font-urbanist)', 'sans-serif'],
+      keyframes: {
+        'slide-in-from-right': {
+          '0%': { transform: 'translateX(100%)' },
+          '100%': { transform: 'translateX(0)' },
+        },
+        'slide-out-to-right': {
+          '0%': { transform: 'translateX(0)' },
+          '100%': { transform: 'translateX(100%)' },
+        },
       },
-      colors: {
-        primary: 'var(--primary-main)',
-        'primary-200': 'var(--primary-main-200)',
-        background: 'var(--background)',
-        foreground: 'var(--foreground)',
-      },
-      screens: {
-        mdlg: '900px',
+      animation: {
+        'slide-in-from-right': 'slide-in-from-right 300ms ease-out',
+        'slide-out-to-right': 'slide-out-to-right 300ms ease-in',
       },
     },
   },

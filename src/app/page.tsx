@@ -1,5 +1,6 @@
 import Categories from '@/categories/components/Categories';
 import Hero from '@/core/components/Hero';
+import FeaturedServices from '@/services/components/FeaturedServices';
 import Image from 'next/image';
 
 export default function Home() {
@@ -17,6 +18,7 @@ export default function Home() {
       </div>
       <Hero />
       <Categories />
+      <FeaturedServices />
     </main>
   );
 }

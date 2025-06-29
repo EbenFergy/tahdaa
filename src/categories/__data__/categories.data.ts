@@ -1,4 +1,19 @@
 import { Category } from '../types/categories.types';
+import {
+  CleaningIcon,
+  PlumbingIcon,
+  CarpentryIcon,
+  ComputerIcon,
+  ConstructionIcon,
+  ElectricalIcon,
+  InteriorDesignIcon,
+  LegalIcon,
+  MedicalIcon,
+  PaintingIcon,
+  PetsIcon,
+  RemovalsIcon,
+  RepairIcon,
+} from '@/components/ui/icons';
 
 export const featuredCategoryIcons: Partial<Record<Category, string>> = {
   [Category.CONSTRUCTION]: '/categories/construction.svg',
@@ -25,4 +40,23 @@ export const featuredCategoryIcons: Partial<Record<Category, string>> = {
   [Category.AUTOMOTIVE]: '/categories/automotive.svg',
   [Category.PETS]: '/categories/pets.svg',
   [Category.EVENT_PLANNING]: '/categories/event-planning.svg',
+};
+
+// "#111827"
+export const iconComponentMap: Partial<Record<Category, React.ComponentType<React.SVGProps<SVGSVGElement>>>> = {
+  [Category.CONSTRUCTION]: ConstructionIcon,
+  [Category.REMOVAL]: RemovalsIcon,
+  [Category.CLEANING]: CleaningIcon,
+  [Category.COMPUTER]: ComputerIcon,
+  [Category.ELECTRICAL]: ElectricalIcon,
+  [Category.PLUMBING]: PlumbingIcon,
+  [Category.REPAIR]: RepairIcon,
+  [Category.PAINTING]: PaintingIcon,
+  [Category.CARPENTRY]: CarpentryIcon,
+  [Category.INTERIOR_DESIGN]: InteriorDesignIcon,
+  [Category.MEDICAL]: MedicalIcon,
+  [Category.LEGAL]: LegalIcon,
+  [Category.PETS]: PetsIcon,
+
+  // Add more here
 };

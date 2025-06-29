@@ -9,7 +9,7 @@ type IconProps = {
 };
 
 const Icon = ({ src, alt, className = '' }: IconProps) => {
-  return <img src={src} alt={alt} className={`object-contain ${className}`} />;
+  return <img src={src} alt={alt} className={`object-contain ${className}`} style={{ stroke: 'red' }} />;
 };
 
 export default Icon;

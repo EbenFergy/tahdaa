@@ -45,33 +45,31 @@ export default function Header() {
               </Button>
             </DialogTrigger>
 
-            <DialogContent className={cn('h-screen', 'w-full', 'absolute', 'top-0', 'left-0', 'right-0')}>
+            <DialogContent
+              className={cn(
+                'fixed right-0 top-0 h-screen w-4/5 sm:w-2/3 max-w-sm bg-white z-50 shadow-xl border-l border-gray-200 p-6 transform',
+                'data-[state=open]:animate-slide-in-from-right',
+                'data-[state=closed]:animate-slide-out-to-right'
+              )}
+            >
               <VisuallyHidden>
                 <DialogTitle>Mobile navigation menu</DialogTitle>
               </VisuallyHidden>
 
-              {/* Header with logo and close */}
-              <div className="flex justify-between items-center">
-                <Icon src="/logo.svg" alt="Tahdaa Logo" className="w-[110]" />
-                {/* <DialogClose asChild>
-                  <Button variant="ghost" size="icon">
-                    <X className="h-5 w-5" />
-                  </Button>
-                </DialogClose> */}
-              </div>
-
               {/* Navigation */}
-              <nav className="flex flex-col gap-4 mt-6">
+              <nav className="flex flex-col text-center gap-8 justify-center h-full">
                 <Link href="/services" className="text-lg font-medium text-gray-700 hover:text-primary">
                   Services
                 </Link>
 
                 <Link href="/signin">
-                  <Button className="w-full bg-neutral-200 text-gray-800 hover:bg-neutral-300">Sign In</Button>
+                  <Button size="lg" className="w-full text-lg bg-neutral-200 text-gray-800 hover:bg-neutral-300">
+                    Sign In
+                  </Button>
                 </Link>
 
                 <Link href="/become-a-pro">
-                  <Button className="w-full bg-gradient-to-r from-[#29BFF4] to-[#003CC5] text-white hover:opacity-90">
+                  <Button size="lg" className="w-full text-lg bg-gradient-to-r from-[#29BFF4] to-[#003CC5] text-white hover:opacity-90">
                     <Icon src="/avatar-pro.svg" alt="Pro Icon" className="rounded-full" />
                     Become a Pro
                   </Button>
