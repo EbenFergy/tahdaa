@@ -1,6 +1,6 @@
 export interface ServiceCardProps {
-  imageUrl: string;
-  serviceName: string;
+  image: string;
+  category: string;
   rating: number;
   title: string;
   price: number;

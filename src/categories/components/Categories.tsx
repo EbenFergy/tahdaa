@@ -35,7 +35,7 @@ export default function Categories() {
               className="flex flex-col items-center justify-center hover:bg-card-gradient border border-transparent hover:border-primary-var rounded py-10 text-center cursor-pointer shadow-[4px_2px_8px_4px_#0000000A] hover:shadow-lg transition-shadow"
             >
               {/* <Icon src={icon} alt={icon.split('/')[2].split('.')[0]} /> */}
-              <IconComp className="hover:fill-[#005ED3]" />
+              <IconComp className="hover:fill-[#005ED3]" fill="#111827" />
               <h3 className="font-semibold text-gray-900">{key}</h3>
             </div>
           ))}

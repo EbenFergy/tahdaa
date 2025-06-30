@@ -11,6 +11,10 @@ import PaintingIcon from './PaintingIcon';
 import PetsIcon from './PetsIcon';
 import RemovalsIcon from '../RemovalsIcon';
 import RepairIcon from './RepairIcon';
+import SmartHomeIcon from './SmartHomeIcon';
+import MowerIcon from './MowerIcon';
+import AutoRepairIcon from './AutoRepairIcon';
+import RemovalIcon from './RemovalIcon';
 
 export {
   CleaningIcon,
@@ -26,4 +30,8 @@ export {
   PetsIcon,
   RemovalsIcon,
   RepairIcon,
+  SmartHomeIcon,
+  MowerIcon,
+  AutoRepairIcon,
+  RemovalIcon,
 };

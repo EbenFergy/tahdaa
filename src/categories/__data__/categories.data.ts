@@ -3,60 +3,44 @@ import {
   CleaningIcon,
   PlumbingIcon,
   CarpentryIcon,
-  ComputerIcon,
   ConstructionIcon,
   ElectricalIcon,
   InteriorDesignIcon,
-  LegalIcon,
-  MedicalIcon,
   PaintingIcon,
-  PetsIcon,
-  RemovalsIcon,
   RepairIcon,
+  SmartHomeIcon,
+  MowerIcon,
+  AutoRepairIcon,
+  RemovalIcon,
 } from '@/components/ui/icons';
-
-export const featuredCategoryIcons: Partial<Record<Category, string>> = {
-  [Category.CONSTRUCTION]: '/categories/construction.svg',
-  [Category.REMOVAL]: '/categories/removals.svg',
-  [Category.CLEANING]: '/categories/cleaning.svg',
-  [Category.COMPUTER]: '/categories/computer.svg',
-  [Category.ELECTRICAL]: '/categories/electrical.svg',
-  [Category.PLUMBING]: '/categories/plumbing.svg',
-  [Category.REPAIR]: '/categories/repair.svg',
-  [Category.PAINTING]: '/categories/painting.svg',
-  [Category.CARPENTRY]: '/categories/carpentry.svg',
-  [Category.INTERIOR_DESIGN]: '/categories/interior_design.svg',
-  [Category.MEDICAL]: '/categories/medical.svg',
-  [Category.LEGAL]: '/categories/legal.svg',
-  [Category.GARDENING]: '/categories/gardening.svg',
-  [Category.ROOFING]: '/categories/roofing.svg',
-  [Category.HVAC]: '/categories/hvac.svg',
-  [Category.FLOORING]: '/categories/flooring.svg',
-  [Category.HANDYMAN]: '/categories/handyman.svg',
-  [Category.MOVING]: '/categories/moving.svg',
-  [Category.SECURITY]: '/categories/security.svg',
-  [Category.FITNESS]: '/categories/fitness.svg',
-  [Category.BEAUTY]: '/categories/beauty.svg',
-  [Category.AUTOMOTIVE]: '/categories/automotive.svg',
-  [Category.PETS]: '/categories/pets.svg',
-  [Category.EVENT_PLANNING]: '/categories/event-planning.svg',
-};
 
 // "#111827"
 export const iconComponentMap: Partial<Record<Category, React.ComponentType<React.SVGProps<SVGSVGElement>>>> = {
-  [Category.CONSTRUCTION]: ConstructionIcon,
-  [Category.REMOVAL]: RemovalsIcon,
-  [Category.CLEANING]: CleaningIcon,
-  [Category.COMPUTER]: ComputerIcon,
-  [Category.ELECTRICAL]: ElectricalIcon,
-  [Category.PLUMBING]: PlumbingIcon,
-  [Category.REPAIR]: RepairIcon,
-  [Category.PAINTING]: PaintingIcon,
-  [Category.CARPENTRY]: CarpentryIcon,
-  [Category.INTERIOR_DESIGN]: InteriorDesignIcon,
-  [Category.MEDICAL]: MedicalIcon,
-  [Category.LEGAL]: LegalIcon,
-  [Category.PETS]: PetsIcon,
+  [Category.ELECTRICAL]: ElectricalIcon, // 1. High-skill & licensed
+  [Category.APPLIANCES]: RepairIcon, // 2. Urgent, popular, recurring
+  [Category.CLEANING]: CleaningIcon, // 3. High volume, fast job matching
+  [Category.SMART_HOME]: SmartHomeIcon, // 4. Perceived as premium tech service
 
-  // Add more here
+  [Category.PLUMBING]: PlumbingIcon, // 5. Useful post-licensing launch
+  [Category.PAINTING]: PaintingIcon, // 6. Visual upgrade + high demand
+  [Category.INTERIOR_DESIGN]: InteriorDesignIcon, // 7. TV mounting, assembly, curtains
+  [Category.CARPENTRY]: CarpentryIcon, // 8. Shelf installs, storage solutions
+
+  [Category.LANDSCAPING]: MowerIcon, // 9. Outdoor upkeep
+  [Category.AUTO]: AutoRepairIcon, // 10. Mobile mechanic, oil, jumpstart
+  [Category.JUNK_REMOVAL]: RemovalIcon, // 11. Post-move & tenant cleanup
+  [Category.CONSTRUCTION]: ConstructionIcon, // 12. Reserved for larger projects
 };
+
+// Start with Residential + Light Commercial
+
+// Apartment unit repairs
+
+// Deep cleans
+
+// Smart home installs
+
+// TV mounting
+
+// Move-in prep
+//  👉 These are fast-moving, build trust, and show traction quickly.

@@ -5,12 +5,12 @@ import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ServiceCardProps } from '../types/service.types';
 
-export default function ServiceCard({ imageUrl, serviceName, rating, title, price, href = '#', className }: ServiceCardProps) {
+export default function ServiceCard({ image, category, rating, title, price, href = '#', className }: ServiceCardProps) {
   return (
     <div className={cn('bg-white rounded-lg shadow-md overflow-hidden border border-gray-200', className)}>
       <div className="relative h-48 w-full">
-        <Image src={imageUrl} alt={serviceName} fill className="object-cover w-full h-full" />
-        <div className="absolute top-2 left-2 bg-white/80 text-sm font-medium px-3 py-1 rounded">{serviceName}</div>
+        <Image src={image} alt={category} fill className="object-cover w-full h-full" />
+        <div className="absolute top-2 left-2 bg-white/80 text-sm font-medium px-3 py-1 rounded">{category}</div>
         <div className="absolute top-2 right-2 bg-white/80 text-sm font-medium px-3 py-1 rounded flex items-center gap-1">
           <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
           {rating.toFixed(1)}

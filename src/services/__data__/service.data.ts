@@ -1,0 +1,38 @@
+export const featuredServices = [
+  {
+    id: '1',
+    image: 'https://res.cloudinary.com/dpr056mnn/image/upload/electrical-services_mg182r.jpg',
+    category: 'Electrical Services',
+    rating: 4.9,
+    title: 'Light Fixture & Ceiling Fan Installation',
+    price: 75,
+    href: '/services/electrical',
+  },
+  {
+    id: '2',
+    image: 'https://res.cloudinary.com/dpr056mnn/image/upload/appliance-repair_f2vtgn.webp',
+    category: 'Appliance Repairs',
+    rating: 4.8,
+    title: 'Fridge, Washer & Dryer Repairs',
+    price: 65,
+    href: '/services/appliances',
+  },
+  {
+    id: '3',
+    image: 'https://res.cloudinary.com/dpr056mnn/image/upload/image_206_gspmtj.png',
+    category: 'Cleaning Services',
+    rating: 4.7,
+    title: 'Deep Cleaning & Move-Out Services',
+    price: 40,
+    href: '/services/cleaning',
+  },
+  {
+    id: '4',
+    image: 'https://res.cloudinary.com/dpr056mnn/image/upload/smart-home-services_yseqwx.jpg',
+    category: 'Smart Home Installations',
+    rating: 4.9,
+    title: 'Smart Locks, Doorbells & Cameras',
+    price: 60,
+    href: '/services/smart-home',
+  },
+];
