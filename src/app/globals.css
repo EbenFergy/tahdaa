@@ -1,8 +1,9 @@
 @import 'tailwindcss';
 
 :root {
-  --primary-main: #003cc5;
+  --primary-main: #005ed3;
   --primary-main-200: #95c7ff;
+  --primary-main-800: #111827;
   --gradient-hover: linear-gradient(180deg, #bfdcff 0%, rgba(191, 220, 255, 0) 100%);
   --background: #ffffff;
   --foreground: #111111;
@@ -12,6 +13,7 @@
 .dark {
   --primary-main: #4f5dff;
   --primary-main-200: #a5b8ff;
+  --primary-main-800: #111827;
   --gradient-hover: linear-gradient(180deg, #1a1a2b 0%, rgba(26, 26, 43, 0) 100%);
   --btn-gradient: linear-gradient(to right, #29bff4, #003cc5);
   --background: #111111;

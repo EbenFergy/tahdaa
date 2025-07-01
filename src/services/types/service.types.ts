@@ -4,6 +4,7 @@ export interface ServiceCardProps {
   rating: number;
   title: string;
   price: number;
+  reviews?: number;
   href?: string;
   className?: string;
 }

@@ -1,4 +1,6 @@
-const tailwindConfig = {
+import { Config } from 'tailwindcss';
+
+const tailwindConfig: Config = {
   darkMode: 'class',
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
@@ -8,14 +10,20 @@ const tailwindConfig = {
     './core/**/*.{js,ts,jsx,tsx}',
     './ui/**/*.{js,ts,jsx,tsx}',
   ],
-  safelist: [
-    'slide-in-from-right',
-    'slide-out-to-right',
-    'data-[state=open]:slide-in-from-right',
-    'data-[state=closed]:slide-out-to-right',
-  ],
   theme: {
     extend: {
+      colors: {
+        primary: {
+          DEFAULT: 'var(--primary-main)',
+          light: 'var(--primary-main-200)',
+        },
+        background: 'var(--background)',
+        foreground: 'var(--foreground)',
+      },
+      backgroundImage: {
+        'btn-gradient': 'var(--btn-gradient)',
+        'card-gradient': 'var(--gradient-hover)',
+      },
       keyframes: {
         'slide-in-from-right': {
           '0%': { transform: 'translateX(100%)' },
@@ -29,6 +37,9 @@ const tailwindConfig = {
       animation: {
         'slide-in-from-right': 'slide-in-from-right 300ms ease-out',
         'slide-out-to-right': 'slide-out-to-right 300ms ease-in',
+      },
+      fontFamily: {
+        sans: ['Urbanist', 'sans-serif'],
       },
     },
   },

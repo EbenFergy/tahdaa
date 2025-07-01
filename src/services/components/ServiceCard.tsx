@@ -4,8 +4,9 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { cn } from '@/lib/utils';
 import { ServiceCardProps } from '../types/service.types';
+import { Button } from '@/components/ui/button';
 
-export default function ServiceCard({ image, category, rating, title, price, href = '#', className }: ServiceCardProps) {
+const ServiceCard = ({ image, category, rating, title, price, href = '#', className }: ServiceCardProps) => {
   return (
     <div className={cn('bg-white rounded-lg shadow-md overflow-hidden border border-gray-200', className)}>
       <div className="relative h-48 w-full">
@@ -18,16 +19,23 @@ export default function ServiceCard({ image, category, rating, title, price, hre
       </div>
 
       <div className="p-4 flex flex-col justify-between h-[140px]">
-        <h3 className="text-lg font-semibold text-gray-800 mb-4">{title}</h3>
-        <div className="flex items-center justify-between">
-          <p className="text-sm text-gray-600">
-            Starting from <span className="font-semibold text-gray-900">${price}/hr</span>
-          </p>
-          <Link href={href} className="bg-primary text-white px-4 py-2 rounded hover:opacity-90 text-sm font-medium">
-            Book Now
+        <h3 className="text-lg font-semibold text-gray-800 ">{title}</h3>
+        <div className="flex justify-between items-end">
+          <div className="flex flex-col text-sm text-gray-600">
+            Starting from
+            <p>
+              <span className="font-semibold text-gray-900 text-lg">${price}</span>/per hour
+            </p>
+          </div>
+          <Link href={href}>
+            <Button size="sm" className={cn('text-white', 'bg-gradient-to-r from-[#29BFF4] to-[#003CC5]', 'hover:opacity-90', 'text-sm')}>
+              Book Now
+            </Button>
           </Link>
         </div>
       </div>
     </div>
   );
-}
+};
+
+export default ServiceCard;
