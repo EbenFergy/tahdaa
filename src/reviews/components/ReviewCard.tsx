@@ -4,7 +4,7 @@ import { Review } from '../types/reviews.types';
 
 const ReviewCard = ({ name, image, review }: Review) => {
   return (
-    <article className="flex flex-col gap-2 p-4 rounded-md shadow bg-white h-50">
+    <article className="flex flex-col gap-2 py-4 px-6 rounded-md shadow-custom-soft bg-white h-50">
       <div className="flex gap-6">
         {image && (
           <figure className="flex justify-center w-12 h-12 rounded-full relative">

@@ -25,6 +25,9 @@ const tailwindConfig: Config = {
         'btn-gradient': 'var(--btn-gradient)',
         'card-gradient': 'var(--gradient-hover)',
       },
+      boxShadow: {
+        'custom-soft': '10px 20px 60px 0px #0000000F',
+      },
       keyframes: {
         'slide-in-from-right': {
           '0%': { transform: 'translateX(100%)' },
