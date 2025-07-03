@@ -13,7 +13,7 @@ const ServiceCard = ({ image, category, rating, title, price, href = '#', classN
         <Image src={image} alt={category} fill className="object-cover w-full h-full" />
         <div className="absolute top-2 left-2 bg-white/80 text-sm font-medium px-3 py-1 rounded">{category}</div>
         <div className="absolute top-2 right-2 bg-white/80 text-sm font-medium px-3 py-1 rounded flex items-center gap-1">
-          <Star className="w-4 h-4 text-yellow-500 fill-yellow-400" />
+          <Star className="w-3 h-3 text-[var(--primary-main)] fill-[var(--primary-main)]" />
           {rating.toFixed(1)}
         </div>
       </div>

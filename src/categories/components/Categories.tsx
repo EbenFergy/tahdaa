@@ -1,19 +1,11 @@
 'use client';
 
-import useMediaQuery from '@/core/hooks/useMediaQuery';
+import { ComponentType, SVGProps } from 'react';
 import { iconComponentMap } from '../__data__/categories.data';
+import useGetResponsiveCount from '@/core/hooks/useGetResponsiveCount';
 
 export default function Categories() {
-  // Tailwind breakpoints:
-  const isMobile = useMediaQuery('(max-width: 767px)');
-  const isTablet = useMediaQuery('(min-width: 768px) and (max-width: 1023px)');
-
-  // Determine limit based on screen size
-  let limit = 12;
-  if (isMobile) limit = 4;
-  else if (isTablet) limit = 8;
-
-  const entries = Object.entries(iconComponentMap).slice(0, limit);
+  const entries = useGetResponsiveCount(iconComponentMap, 12, 8, 4) as [string, ComponentType<SVGProps<SVGSVGElement>>][];
 
   return (
     <section className="py-20 ">
